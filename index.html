@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Routine</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         table,
         th,
         td {
@@ -13,199 +17,266 @@
             border-collapse: collapse;
             text-align: center;
         }
+
+        table {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+
+        /* Make table responsive */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            /* Hide the header row */
+            thead tr:nth-child(2) {
+                display: none;
+            }
+
+
+            /* Hide empty cells */
+            td:empty {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h1 style="color:white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; text-align: center; text-decoration: underline;">Advance Coaching Home</h1>
-    <table style="width: 70%; margin-left: auto; margin-right: auto;">
-        <tr>
-            <th colspan="6" style="text-shadow: 0 0 3px #FF0000; font-size: 20px;">Class routine for class 11<sup>th</sup></th>
-        </tr>
-        <tr>
-            <th>Day</th>
-            <th>Group</th>
-            <th>9am - 10am</th>
-            <th>10:05am - 11:05am</th>
-            <th>11:10am - 12:10pm</th>
-            <th>12:15pm - 1:15pm</th>
-        </tr>
-        <!-- Friday schedul -->
-        <tr>
-            <th rowspan="4" style="background-color: #FFD7C4;">Friday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">H.Math, Room-101</td>
-            <td style="color: #3FA2F6;">CHE, Room-101</td>
-            <td style="color: #3FA2F6;"></td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ECO, Room-102</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!-- saturday  -->
-        <tr>
-            <th rowspan="4" style="background-color: #D1E9F6;">Saturday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">ENG, Room-102</td>
-            <td style="color: #3FA2F6;">H.Math, Room-101</td>
-            <td style="color: #3FA2F6;">CHE, Room-101</td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;">ENG, Room-102</td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;">AC/FI, Room-101</td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ENG, Room-102</td>
-            <td>PO, Room-102</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!-- sunday -->
-        <tr>
-            <th rowspan="4" style="background-color: #FFD7C4;">Sunday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">ICT, Room-101</td>
-            <td style="color: #3FA2F6;">PHY, Room-101</td>
-            <td style="color: #3FA2F6;">BIO, Room-102</td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;">ICT, Room-101</td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;">MA, Room-101</td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ICT, Room-101</td>
-            <td>ECO, Room-102</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!-- monday -->
-        <tr>
-            <th rowspan="4" style="background-color: #D1E9F6;">Monday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">ENG, Room-102</td>
-            <td style="color: #3FA2F6;">H.Math, Room-101</td>
-            <td style="color: #3FA2F6;">CHE, Room-101</td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;">ENG, Room-102</td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;">AC/FI, Room-101</td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ENG, Room-102</td>
-            <td>PO, Room-102</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!-- tue -->
-        <tr>
-            <th rowspan="4" style="background-color: #FFD7C4;">Tuesday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">ICT, Room-101</td>
-            <td style="color: #3FA2F6;">PHY, Room-101</td>
-            <td style="color: #3FA2F6;">BIO, Room-102</td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;">ICT, Room-101</td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;">MA, Room-101</td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ICT, Room-101</td>
-            <td>ECO, Room-102</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!-- wed -->
-        <tr>
-            <th rowspan="4" style="background-color: #D1E9F6;">Wednesday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">ENG, Room-102</td>
-            <td style="color: #3FA2F6;">PHY, Room-101</td>
-            <td style="color: #3FA2F6;">BIO, Room-102</td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;">ENG, Room-102</td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;">AC/FI, Room-101</td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ENG, Room-102</td>
-            <td>PO, Room-102</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!-- thursday -->
-        <tr>
-            <th rowspan="4" style="background-color: #FFD7C4;">Thursday</th>
-        </tr>
-        <tr>
-            <th style="color: #3FA2F6;">Science</th>
-            <td style="color: #3FA2F6;">ICT, Room-101</td>
-            <td style="color: #3FA2F6;"></td>
-            <td style="color: #3FA2F6;"></td>
-            <td style="color: #3FA2F6;"></td>
-        </tr>
-        <tr>
-            <th style="color: red;">Commerce</th>
-            <td style="color: red;">ICT, Room-101</td>
-            <td style="color: red;"></td>
-            <td style="color: red;"></td>
-            <td style="color: red;">MA, Room-101</td>
-        </tr>
-        <tr>
-            <th>Arts</th>
-            <td>ICT, Room-101</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <h1
+        style="color:white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; text-align: center; text-decoration: underline;">
+        Advance Coaching Home</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6" style="text-shadow: 0 0 3px #FF0000; font-size: 20px;">Class routine for class
+                        11<sup>th</sup></th>
+                </tr>
+                <tr>
+                    <th>Day</th>
+                    <th>Group</th>
+                    <th>9am - 10am</th>
+                    <th>10:05am - 11:05am</th>
+                    <th>11:10am - 12:10pm</th>
+                    <th>12:15pm - 1:15pm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Friday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #FFD7C4;" data-label="Day">Friday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">H.Math, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am">CHE, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am"></td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ECO, Room-102</td>
+                    <td data-label="10:05am - 11:05am"></td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <!-- Saturday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #D1E9F6;" data-label="Day">Saturday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">ENG, Room-102</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am">H.Math, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm">CHE, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am">ENG, Room-102</td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm">AC/FI, Room-101</td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ENG, Room-102</td>
+                    <td data-label="10:05am - 11:05am">PO, Room-102</td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <!-- Sunday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #FFD7C4;" data-label="Day">Sunday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">ICT, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am">PHY, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm">BIO, Room-102</td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am">ICT, Room-101</td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm">MA, Room-101</td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ICT, Room-101</td>
+                    <td data-label="10:05am - 11:05am">ECO, Room-102</td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <!-- Monday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #D1E9F6;" data-label="Day">Monday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">ENG, Room-102</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am">H.Math, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm">CHE, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am">ENG, Room-102</td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm">AC/FI, Room-101</td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ENG, Room-102</td>
+                    <td data-label="10:05am - 11:05am">PO, Room-102</td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <!-- Tuesday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #FFD7C4;" data-label="Day">Tuesday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">ICT, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am">PHY, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm">BIO, Room-102</td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am">ICT, Room-101</td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm">MA, Room-101</td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ICT, Room-101</td>
+                    <td data-label="10:05am - 11:05am">ECO, Room-102</td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <!-- Wednesday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #D1E9F6;" data-label="Day">Wednesday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">ENG, Room-102</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am">PHY, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm">BIO, Room-102</td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am">ENG, Room-102</td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm">AC/FI, Room-101</td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ENG, Room-102</td>
+                    <td data-label="10:05am - 11:05am">PO, Room-102</td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <!-- Thursday schedule -->
+                <tr>
+                    <th rowspan="4" style="background-color: #FFD7C4;" data-label="Day">Thursday</th>
+                </tr>
+                <tr>
+                    <th style="color: #3FA2F6;" data-label="Group">Science</th>
+                    <td style="color: #3FA2F6;" data-label="9am - 10am">ICT, Room-101</td>
+                    <td style="color: #3FA2F6;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: #3FA2F6;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: #3FA2F6;" data-label="12:15pm - 1:15pm"></td>
+                </tr>
+                <tr>
+                    <th style="color: red;" data-label="Group">Commerce</th>
+                    <td style="color: red;" data-label="9am - 10am">ICT, Room-101</td>
+                    <td style="color: red;" data-label="10:05am - 11:05am"></td>
+                    <td style="color: red;" data-label="11:10am - 12:10pm"></td>
+                    <td style="color: red;" data-label="12:15pm - 1:15pm">MA, Room-101</td>
+                </tr>
+                <tr>
+                    <th data-label="Group">Arts</th>
+                    <td data-label="9am - 10am">ICT, Room-101</td>
+                    <td data-label="10:05am - 11:05am"></td>
+                    <td data-label="11:10am - 12:10pm"></td>
+                    <td data-label="12:15pm - 1:15pm"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
